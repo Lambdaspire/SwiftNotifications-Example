@@ -1,0 +1,15 @@
+{
+  "originHash" : "c6a81b417ef9eec12a4f083a31c686a42b8f7bb3b951bf1333850e74bd4e42b6",
+  "pins" : [
+    {
+      "identity" : "swiftnotifications",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Lambdaspire/SwiftNotifications",
+      "state" : {
+        "branch" : "main",
+        "revision" : "9471a267ad62440352f1ca0a876c9368f4f096d7"
+      }
+    }
+  ],
+  "version" : 3
+}
