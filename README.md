@@ -15,3 +15,6 @@ If you're grokking it, in order:
   - Demonstrates scheduling notifications.
 - **/Notifications folder**
   - Notification action identifiers, response handlers, and request data types.
+
+https://github.com/Lambdaspire/SwiftNotifications-Example/assets/103079506/320de141-b064-40e3-865a-2c0fc37890ac
+
