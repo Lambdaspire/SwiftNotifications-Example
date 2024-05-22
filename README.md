@@ -12,6 +12,6 @@ If you're grokking it, in order:
   - Shows how to create the NotificationService instance and register handlers, as well as use the BasicServiceLocator as a DependencyResolver.
 - **ContentView.swift**
   - Demonstrates app state that is shared with notification handlers.
-  - Demosntrates scheduling notifications.
+  - Demonstrates scheduling notifications.
 - **/Notifications folder**
   - Notification action identifiers, response handlers, and request data types.
