@@ -1,4 +1,5 @@
 
+import LambdaspireAbstractions
 import LambdaspireSwiftNotifications
 
 struct DefaultHandler : NotificationActionHandler {
@@ -11,7 +12,7 @@ struct DefaultHandler : NotificationActionHandler {
             // The default action brings the app into the foreground,
             // so show the performance review UI for the relevant employee.
             await resolver
-                .resolve(AppState.self)!
+                .resolve(AppState.self)
                 .reviewEmployeePerformance(requestData.employeeName)
         }
 }

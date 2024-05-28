@@ -1,4 +1,5 @@
 
+import LambdaspireAbstractions
 import LambdaspireSwiftNotifications
 
 struct WrittenNoteActionIdentifier : NotificationActionIdentifier {
@@ -17,7 +18,7 @@ struct WrittenNoteHandler : NotificationActionHandler {
             // The user has written a note rather than supplying a rating,
             // so notify HR post-haste.
             await resolver
-                .resolve(HumanResources.self)!
+                .resolve(HumanResources.self)
                 .notify("Regarding \(requestData.employeeName): \(userInput)")
         }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C4AC3742C06971A0084E5E0 /* LambdaspireDependencyResolution in Frameworks */ = {isa = PBXBuildFile; productRef = 7C4AC3732C06971A0084E5E0 /* LambdaspireDependencyResolution */; };
+		7C4AC3772C0697610084E5E0 /* LambdaspireLogging in Frameworks */ = {isa = PBXBuildFile; productRef = 7C4AC3762C0697610084E5E0 /* LambdaspireLogging */; };
 		7CD088092BFDD5510087D441 /* Lambdaspire_SwiftNotifications_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD088082BFDD5510087D441 /* Lambdaspire_SwiftNotifications_ExampleApp.swift */; };
 		7CD0880B2BFDD5510087D441 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD0880A2BFDD5510087D441 /* ContentView.swift */; };
 		7CD0880D2BFDD5510087D441 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD0880C2BFDD5510087D441 /* Assets.xcassets */; };
@@ -44,7 +46,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C4AC3742C06971A0084E5E0 /* LambdaspireDependencyResolution in Frameworks */,
 				7CD088192BFDD5AA0087D441 /* LambdaspireSwiftNotifications in Frameworks */,
+				7C4AC3772C0697610084E5E0 /* LambdaspireLogging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +141,8 @@
 			name = "Lambdaspire-SwiftNotifications-Example";
 			packageProductDependencies = (
 				7CD088182BFDD5AA0087D441 /* LambdaspireSwiftNotifications */,
+				7C4AC3732C06971A0084E5E0 /* LambdaspireDependencyResolution */,
+				7C4AC3762C0697610084E5E0 /* LambdaspireLogging */,
 			);
 			productName = "Lambdaspire-SwiftNotifications-Example";
 			productReference = 7CD088052BFDD5510087D441 /* Lambdaspire-SwiftNotifications-Example.app */;
@@ -168,6 +174,8 @@
 			mainGroup = 7CD087FC2BFDD5510087D441;
 			packageReferences = (
 				7CD088172BFDD5AA0087D441 /* XCRemoteSwiftPackageReference "SwiftNotifications" */,
+				7C4AC3722C06971A0084E5E0 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-DependencyResolution" */,
+				7C4AC3752C0697610084E5E0 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-Logging" */,
 			);
 			productRefGroup = 7CD088062BFDD5510087D441 /* Products */;
 			projectDirPath = "";
@@ -425,17 +433,43 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7C4AC3722C06971A0084E5E0 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-DependencyResolution" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lambdaspire/Lambdaspire-Swift-DependencyResolution";
+			requirement = {
+				kind = exactVersion;
+				version = 0.0.2;
+			};
+		};
+		7C4AC3752C0697610084E5E0 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-Logging" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lambdaspire/Lambdaspire-Swift-Logging";
+			requirement = {
+				kind = exactVersion;
+				version = 0.0.2;
+			};
+		};
 		7CD088172BFDD5AA0087D441 /* XCRemoteSwiftPackageReference "SwiftNotifications" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Lambdaspire/SwiftNotifications";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = 0.0.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7C4AC3732C06971A0084E5E0 /* LambdaspireDependencyResolution */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C4AC3722C06971A0084E5E0 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-DependencyResolution" */;
+			productName = LambdaspireDependencyResolution;
+		};
+		7C4AC3762C0697610084E5E0 /* LambdaspireLogging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C4AC3752C0697610084E5E0 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-Logging" */;
+			productName = LambdaspireLogging;
+		};
 		7CD088182BFDD5AA0087D441 /* LambdaspireSwiftNotifications */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7CD088172BFDD5AA0087D441 /* XCRemoteSwiftPackageReference "SwiftNotifications" */;

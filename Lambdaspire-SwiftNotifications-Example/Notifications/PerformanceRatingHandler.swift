@@ -1,5 +1,6 @@
 
 import LambdaspireSwiftNotifications
+import LambdaspireAbstractions
 
 struct PerformanceRatingActionIdentifier : NotificationActionIdentifier {
     var rating: String
@@ -15,7 +16,7 @@ struct PerformanceRatingHandler : NotificationActionHandler {
             // The user has supplied a rating directly from the notification,
             // so update the database accordingly.
             await resolver
-                .resolve(EmployeeDatabase.self)!
+                .resolve(EmployeeDatabase.self)
                 .saveReview(employeeName: requestData.employeeName, rating: actionIdentifierData.rating)
         }
 }

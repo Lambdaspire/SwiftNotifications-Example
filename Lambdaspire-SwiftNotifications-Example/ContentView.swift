@@ -1,11 +1,12 @@
 
 import SwiftUI
 import LambdaspireSwiftNotifications
+import LambdaspireDependencyResolution
 
 struct ContentView : View {
     
     @EnvironmentObject private var appState: AppState
-    @EnvironmentObject private var serviceLocator: BasicServiceLocator
+    @EnvironmentObject private var serviceLocator: ServiceLocator
     
     var body: some View {
         Button {
@@ -18,19 +19,19 @@ struct ContentView : View {
             Text("Performance Review for \(e)")
         }
         .task {
-            await serviceLocator.resolve(NotificationService.self)!.requestPermission()
+            await serviceLocator.resolve(NotificationService.self).requestPermission()
         }
     }
     
     private func notificate() {
         Task {
             let employees = await serviceLocator
-                .resolve(EmployeeDatabase.self)!
+                .resolve(EmployeeDatabase.self)
                 .getMySubordinates()
             
             for employee in employees {
                 await serviceLocator
-                    .resolve(NotificationService.self)!
+                    .resolve(NotificationService.self)
                     .requestNotification(.init(
                         identifier: .init(),
                         date: thisAfternoon,

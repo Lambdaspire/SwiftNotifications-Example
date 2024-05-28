@@ -1,13 +1,40 @@
 {
-  "originHash" : "c6a81b417ef9eec12a4f083a31c686a42b8f7bb3b951bf1333850e74bd4e42b6",
+  "originHash" : "d436dd4bb943ae743cc1eddcc6410382a3b9e24d06030939bf9c23139b6cdf33",
   "pins" : [
+    {
+      "identity" : "lambdaspire-swift-abstractions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Lambdaspire/Lambdaspire-Swift-Abstractions",
+      "state" : {
+        "revision" : "304fb68a55c3442669334ba7785c217f57d109b7",
+        "version" : "0.0.1"
+      }
+    },
+    {
+      "identity" : "lambdaspire-swift-dependencyresolution",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Lambdaspire/Lambdaspire-Swift-DependencyResolution",
+      "state" : {
+        "revision" : "02b280839492f821e4be6b64a55f8fbd47b71879",
+        "version" : "0.0.2"
+      }
+    },
+    {
+      "identity" : "lambdaspire-swift-logging",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Lambdaspire/Lambdaspire-Swift-Logging",
+      "state" : {
+        "revision" : "97db93f35049d5d46298770611f728a8f22cf344",
+        "version" : "0.0.2"
+      }
+    },
     {
       "identity" : "swiftnotifications",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Lambdaspire/SwiftNotifications",
       "state" : {
-        "branch" : "main",
-        "revision" : "9471a267ad62440352f1ca0a876c9368f4f096d7"
+        "revision" : "042546e30d01dfdd0bb43b177e4111869ff190bd",
+        "version" : "0.0.2"
       }
     }
   ],

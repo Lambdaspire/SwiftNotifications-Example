@@ -1,12 +1,15 @@
 
 import Combine
 import SwiftUI
-import LambdaspireSwiftNotifications
 
-extension BasicServiceLocator {
-    static var `default`: BasicServiceLocator {
+import LambdaspireSwiftNotifications
+import LambdaspireDependencyResolution
+import LambdaspireLogging
+
+extension ServiceLocator {
+    static var `default`: ServiceLocator {
         
-        let s: BasicServiceLocator = .init()
+        let s: ServiceLocator = .init()
         
         s.register(HumanResources())
         s.register(EmployeeDatabase())
@@ -25,7 +28,7 @@ extension BasicServiceLocator {
 }
 
 extension View {
-    func with(_ appState: AppState, _ serviceLocator: BasicServiceLocator) -> some View {
+    func with(_ appState: AppState, _ serviceLocator: ServiceLocator) -> some View {
         serviceLocator.register(appState)
         return self
             .environmentObject(appState)
@@ -34,4 +37,4 @@ extension View {
 }
 
 // So we can pass it along with @EnvironmentObject
-extension BasicServiceLocator : ObservableObject { }
+extension ServiceLocator : ObservableObject { }
