@@ -6,7 +6,7 @@ import LambdaspireDependencyResolution
 struct ContentView : View {
     
     @EnvironmentObject private var appState: AppState
-    @EnvironmentObject private var serviceLocator: ServiceLocator
+    @EnvironmentObject private var container: Container
     
     var body: some View {
         Button {
@@ -19,18 +19,18 @@ struct ContentView : View {
             Text("Performance Review for \(e)")
         }
         .task {
-            await serviceLocator.resolve(NotificationService.self).requestPermission()
+            await container.resolve(NotificationService.self).requestPermission()
         }
     }
     
     private func notificate() {
         Task {
-            let employees = await serviceLocator
+            let employees = await container
                 .resolve(EmployeeDatabase.self)
                 .getMySubordinates()
             
             for employee in employees {
-                await serviceLocator
+                await container
                     .resolve(NotificationService.self)
                     .requestNotification(.init(
                         identifier: .init(),

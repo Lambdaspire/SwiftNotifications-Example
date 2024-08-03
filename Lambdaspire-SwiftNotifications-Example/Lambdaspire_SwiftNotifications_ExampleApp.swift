@@ -1,18 +1,22 @@
 
 import SwiftUI
+import LambdaspireLogging
+import LambdaspireAbstractions
 import LambdaspireSwiftNotifications
 import LambdaspireDependencyResolution
 
 @main
 struct Lambdaspire_SwiftNotifications_ExampleApp : App {
     
-    @StateObject private var appState: AppState = .init()
+    private let container: Container = .default
     
-    private let serviceLocator: ServiceLocator = .default
+    init() {
+        Log.setLogger(PrintLogger())
+    }
     
     var body: some Scene {
         WindowGroup {
-            ContentView().with(appState, serviceLocator)
+            ContentView().with(container)
         }
     }
 }

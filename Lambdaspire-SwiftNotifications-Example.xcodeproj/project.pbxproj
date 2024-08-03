@@ -16,7 +16,7 @@
 		7CD088192BFDD5AA0087D441 /* LambdaspireSwiftNotifications in Frameworks */ = {isa = PBXBuildFile; productRef = 7CD088182BFDD5AA0087D441 /* LambdaspireSwiftNotifications */; };
 		7CD0881C2BFDD5E00087D441 /* DefaultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD0881B2BFDD5E00087D441 /* DefaultHandler.swift */; };
 		7CD0881F2BFDD5FB0087D441 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD0881E2BFDD5FB0087D441 /* AppState.swift */; };
-		7CD088222BFDD6BD0087D441 /* DefaultServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD088212BFDD6BD0087D441 /* DefaultServiceLocator.swift */; };
+		7CD088222BFDD6BD0087D441 /* DefaultContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD088212BFDD6BD0087D441 /* DefaultContainer.swift */; };
 		7CD088252BFDD7100087D441 /* HumanResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD088242BFDD7100087D441 /* HumanResources.swift */; };
 		7CD088272BFDD74E0087D441 /* EmployeeDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD088262BFDD74E0087D441 /* EmployeeDatabase.swift */; };
 		7CD088292BFDDD480087D441 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD088282BFDDD480087D441 /* Common.swift */; };
@@ -33,7 +33,7 @@
 		7CD088102BFDD5510087D441 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7CD0881B2BFDD5E00087D441 /* DefaultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHandler.swift; sourceTree = "<group>"; };
 		7CD0881E2BFDD5FB0087D441 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		7CD088212BFDD6BD0087D441 /* DefaultServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultServiceLocator.swift; sourceTree = "<group>"; };
+		7CD088212BFDD6BD0087D441 /* DefaultContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultContainer.swift; sourceTree = "<group>"; };
 		7CD088242BFDD7100087D441 /* HumanResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanResources.swift; sourceTree = "<group>"; };
 		7CD088262BFDD74E0087D441 /* EmployeeDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDatabase.swift; sourceTree = "<group>"; };
 		7CD088282BFDDD480087D441 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 				7CD0881D2BFDD5F60087D441 /* State */,
 				7CD0881A2BFDD5D70087D441 /* Notifications */,
 				7CD088082BFDD5510087D441 /* Lambdaspire_SwiftNotifications_ExampleApp.swift */,
-				7CD088212BFDD6BD0087D441 /* DefaultServiceLocator.swift */,
+				7CD088212BFDD6BD0087D441 /* DefaultContainer.swift */,
 				7CD0880A2BFDD5510087D441 /* ContentView.swift */,
 				7CD0880C2BFDD5510087D441 /* Assets.xcassets */,
 				7CD0880E2BFDD5510087D441 /* Lambdaspire_SwiftNotifications_Example.entitlements */,
@@ -210,7 +210,7 @@
 				7CD0882D2BFDDD820087D441 /* WrittenNoteHandler.swift in Sources */,
 				7CD088252BFDD7100087D441 /* HumanResources.swift in Sources */,
 				7CD088092BFDD5510087D441 /* Lambdaspire_SwiftNotifications_ExampleApp.swift in Sources */,
-				7CD088222BFDD6BD0087D441 /* DefaultServiceLocator.swift in Sources */,
+				7CD088222BFDD6BD0087D441 /* DefaultContainer.swift in Sources */,
 				7CD0881C2BFDD5E00087D441 /* DefaultHandler.swift in Sources */,
 				7CD0881F2BFDD5FB0087D441 /* AppState.swift in Sources */,
 			);
@@ -437,24 +437,24 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Lambdaspire/Lambdaspire-Swift-DependencyResolution";
 			requirement = {
-				kind = exactVersion;
-				version = 0.0.2;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
 			};
 		};
 		7C4AC3752C0697610084E5E0 /* XCRemoteSwiftPackageReference "Lambdaspire-Swift-Logging" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Lambdaspire/Lambdaspire-Swift-Logging";
 			requirement = {
-				kind = exactVersion;
-				version = 0.0.2;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
 			};
 		};
 		7CD088172BFDD5AA0087D441 /* XCRemoteSwiftPackageReference "SwiftNotifications" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Lambdaspire/SwiftNotifications";
 			requirement = {
-				kind = exactVersion;
-				version = 0.0.2;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
